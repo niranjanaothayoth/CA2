@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>Match all the pairs of cards to win. Each turn, you can flip two cards. If they match, they stay flipped. If not, they flip back over. Try to match all pairs in the fewest moves possible!</p>
+        </div>
+        <div class="game-setup">
+            <h2>Welcome to the Memory Card Game</h2>
+            <label for="playerName">Name:</label>
+            <input type="text" id="playerName" required>
+            <label for="playerNickname">Nickname:</label>
+            <input type="text" id="playerNickname" required>
+            <button id="startGame">Start Game</button>
+        </div>
+        <div class="game-board hidden">
+            <div class="score-board">
+                <p id="playerInfo"></p>
+                <p>Moves: <span id="movesCount">0</span></p>
+                <p id="gameMessage"></p>
+            </div>
+            <div class="cards-container">
+                <!-- Cards will be dynamically generated here -->
+            </div>
+            <button id="restartGame" class="hidden">Restart Game</button>
+        </div>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="assets/background-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="flipSound">
+        <source src="assets/flip-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winSound">
+        <source src="assets/win-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loseSound">
+        <source src="assets/lose-sound.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
+
